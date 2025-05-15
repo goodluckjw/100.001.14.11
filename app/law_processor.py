@@ -589,7 +589,7 @@ def run_amendment_logic(find_word, replace_word):
                         else:  # 규칙 15-2-2
                             rule = f'"{chunk}"를 "{replaced}"로 한다.'
             # "등", "등인", "등만" 등의 접미사는 일반 처리와 통합 (덩어리에서 무시)
-            elif suffix in ["등", "등인", "등만", "등의", "등에", "에게", "만", "만을", "만이", "만은", "만에", "만으로"]:
+            elif suffix in ["등", "등인", "등만", "등의", "등에", "에", "에게", "만", "만을", "만이", "만은", "만에", "만으로"]:
                 # 규칙 0 적용 (조사가 없는 경우)
                 rule = apply_josa_rule(chunk, replaced, josa)
             elif suffix and suffix != "의":  # "의"는 개별 처리하지 않음
